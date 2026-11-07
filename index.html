@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier W — Personalisierte Uhren</title>
+  <meta name="description" content="Atelier W gestaltet personalisierte Uhren für Vereine, Unternehmen und private Anlässe. Anfrage statt Shop. Preis auf Anfrage.">
+  <meta name="theme-color" content="#1f3a5f">
+  <link rel="icon" href="assets/logo/atelier-w-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/hero-720.webp" as="image" type="image/webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preload" href="assets/images/hero-1440.webp" as="image" type="image/webp" media="(min-width: 900px)">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <noscript>
+    <style>
+      @media (max-width: 1119px) {
+        .nav-toggle { display: none !important; }
+        .nav-panel {
+          position: static !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: none !important;
+          background: transparent !important;
+          display: flex !important;
+          flex-direction: row !important;
+          flex-wrap: wrap !important;
+          align-items: center !important;
+          padding: 0 !important;
+          overflow: visible !important;
+        }
+        .header-bar { height: auto; min-height: var(--nav-h); flex-wrap: wrap; padding: 0.75rem 0; }
+        .site-header { height: auto; }
+        .nav-links { display: flex !important; flex-wrap: wrap; gap: 0.4rem 0.9rem !important; }
+        .nav-links a {
+          font-family: var(--sans) !important;
+          font-size: 0.78rem !important;
+          letter-spacing: 0.12em !important;
+          text-transform: uppercase !important;
+          border-bottom: 0 !important;
+          padding: 0.35rem 0 !important;
+        }
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip" href="#inhalt">Zum Inhalt</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <img src="assets/logo/atelier-w-logo-white.svg" alt="Atelier W" width="116" height="78">
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navPanel" aria-label="Menü">
+        <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+        </svg>
+        <svg class="icon-close is-hidden" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+        </svg>
+      </button>
+      <div class="nav-panel" id="navPanel">
+        <nav aria-label="Hauptnavigation">
+          <ul class="nav-links">
+            <li><a href="#anlaesse">Anlässe</a></li>
+            <li><a href="#ablauf">Ablauf</a></li>
+            <li><a href="#konfigurator">Konfigurator</a></li>
+            <li><a href="#atelier">Atelier</a></li>
+            <li><a href="#materialien">Materialien</a></li>
+            <li><a href="#beispiele">Beispiele</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn-ivory nav-cta" href="#anfrage">Uhr anfragen</a>
+      </div>
+    </div>
+  </header>
+
+  <noscript>
+    <p class="noscript-banner">Navigation, Konfigurator und Formular dieser Demonstration sind mit JavaScript bedienbar. Die Texte bleiben ohne Skript lesbar.</p>
+  </noscript>
+
+  <main id="inhalt">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <picture>
+          <source media="(min-width: 900px)" srcset="assets/images/hero-1440.webp" type="image/webp">
+          <source media="(max-width: 899px)" srcset="assets/images/hero-720.webp" type="image/webp">
+          <img src="assets/images/hero-720.webp" alt="Stahlarmbanduhr mit metallblauem Sonnenschliff-Zifferblatt auf dunklem Grund" width="1440" height="810" fetchpriority="high" decoding="async">
+        </picture>
+        <span class="sample-tag">Beispielbild</span>
+      </div>
+      <div class="hero-copy">
+        <div class="hero-copy-inner">
+          <p class="eyebrow">Atelier W, Schweiz</p>
+          <h1 id="hero-title"><span class="h1-line">Was euch verbindet.</span> <span class="h1-line">Für immer am Handgelenk.</span></h1>
+          <p class="lead">Personalisierte Uhren für Vereine, Unternehmen und private Anlässe. Euer Zeichen auf dem Zifferblatt, eure Worte im Gehäuseboden.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ivory" href="#anfrage">Uhr anfragen</a>
+            <a class="btn btn-ghost" href="#konfigurator">Uhr gestalten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="Kurz gesagt">
+      <div class="wrap facts-row">
+        <p><span class="fact-k">Privat</span>Ab einem Stück</p>
+        <p><span class="fact-k">Vereine und Firmen</span>Serien mit gleichem Zeichen</p>
+        <p><span class="fact-k">Offerte</span>Preis auf Anfrage</p>
+      </div>
+    </section>
+
+    <section class="section" id="anlaesse">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Drei Anlässe</p>
+          <h2>Für Clubs, Firmen und einzelne Menschen</h2>
+          <p class="lead">Dieselbe Ruhe in der Form, ein anderes Zeichen auf der Uhr. Ihr bringt Anlass und Vorlage, wir setzen beides in Stahl.</p>
+        </header>
+        <div class="cards">
+          <article class="audience-card reveal">
+            <p class="card-index">01</p>
+            <h3>Vereine &amp; Clubs</h3>
+            <p>Wappen, Farben, ein Datum. Für die Mannschaft, den Fanclub, die Zunft oder den Verband.</p>
+            <a class="text-link" href="#vereine">Beispiel ansehen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </a>
+          </article>
+          <article class="audience-card reveal delay-1">
+            <p class="card-index">02</p>
+            <h3>Unternehmen</h3>
+            <p>Firmenjubiläen, Mitarbeitergeschenke, Kundengeschenke. Ein Gegenstand, der bleibt, wenn die Rede vorbei ist.</p>
+            <a class="text-link" href="#unternehmen">Beispiel ansehen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </a>
+          </article>
+          <article class="audience-card reveal delay-2">
+            <p class="card-index">03</p>
+            <h3>Privat</h3>
+            <p>Hochzeit, Geburt, ein rundes Jubiläum. Initialen und ein Tag, graviert für eine Person.</p>
+            <a class="text-link" href="#privat">Beispiel ansehen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="stories">
+          <article class="story" id="vereine">
+            <figure class="reveal">
+              <div class="photo">
+                <img src="assets/images/club-720.webp" srcset="assets/images/club-720.webp 720w, assets/images/club-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 46vw" alt="Stahlarmbanduhr mit marineblauem Zifferblatt und Fussballwappen auf einem dunkelblauen Schal" width="1440" height="1080" loading="lazy" decoding="async">
+                <span class="sample-tag">Beispielbild</span>
+              </div>
+            </figure>
+            <div class="story-copy reveal">
+              <p class="eyebrow">Vereine &amp; Clubs</p>
+              <h3>Ein Wappen, das alle kennen</h3>
+              <p>Für Clubs beginnt es fast immer mit einer Datei: das Zeichen, die Farben, manchmal ein Satz aus der Hymne. Wir setzen es auf das Zifferblatt oder in den Boden, abgestimmt auf eure Farben. Die Serie bleibt in der Form gleich. Jahrgang, Name oder Funktion können zusätzlich graviert werden.</p>
+              <a class="text-link" href="#anfrage" data-kundentyp="verein">Uhr für einen Verein anfragen
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="story reverse" id="unternehmen">
+            <figure class="reveal">
+              <div class="photo">
+                <img src="assets/images/company-720.webp" srcset="assets/images/company-720.webp 720w, assets/images/company-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 46vw" alt="Zwei Uhren auf einem Tisch, eine mit kleinem Signet, die andere mit Gravur 25 Jahre, daneben ein offenes Etui" width="1440" height="1080" loading="lazy" decoding="async">
+                <span class="sample-tag">Beispielbild</span>
+              </div>
+            </figure>
+            <div class="story-copy reveal">
+              <p class="eyebrow">Unternehmen</p>
+              <h3>Das Jubiläum, in Stahl</h3>
+              <p>Fünfundzwanzig Jahre, ein Signet, ein Etui. Die Uhr ist für Mitarbeitende gedacht, für Kunden, für den Verwaltungsrat: ruhig genug für den Alltag, klar genug für den Anlass. Die Stückzahl bestimmt, wie wir Logo und Gravur anlegen.</p>
+              <a class="text-link" href="#anfrage" data-kundentyp="unternehmen">Uhr für ein Unternehmen anfragen
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="story" id="privat">
+            <figure class="reveal">
+              <div class="photo">
+                <img src="assets/images/private-720.webp" srcset="assets/images/private-720.webp 720w, assets/images/private-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 46vw" alt="Bodengravur L + M und 14.06.2026 auf hellem Leinen, daneben zwei Ringe" width="1440" height="1080" loading="lazy" decoding="async">
+                <span class="sample-tag">Beispielbild</span>
+              </div>
+            </figure>
+            <div class="story-copy reveal">
+              <p class="eyebrow">Privat</p>
+              <h3>Zwei Buchstaben und ein Tag</h3>
+              <p>L und M, der 14. Juni 2026. Manche Uhren sprechen laut. Diese spricht, wenn man sie umdreht. Eine Gravur auf dem Boden, auf Wunsch ein kurzes Zeichen auf dem Zifferblatt. Für die Hochzeit, die Geburt, den Tag, den ihr nicht dem Kalender überlassen wollt. Ab einem Stück.</p>
+              <a class="text-link" href="#anfrage" data-kundentyp="privat">Uhr für einen privaten Anlass anfragen
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-band" id="ablauf">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Ablauf</p>
+          <h2>Von der Idee bis zur Übergabe</h2>
+          <p class="lead">Fünf Schritte. Ihr bleibt an jedem davon beteiligt. Nichts wird graviert, bevor der Entwurf steht.</p>
+        </header>
+        <div class="process-grid">
+          <ol class="steps reveal">
+            <li class="step">
+              <span class="step-no">01</span>
+              <div>
+                <h3>Idee</h3>
+                <p>Anlass, Stückzahl, Text und Logo. Wir fragen nach, bevor wir zeichnen.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no">02</span>
+              <div>
+                <h3>Entwurf</h3>
+                <p>Skizze mit Platz für Zeichen, Farbe und Gravur. Ihr seht den Vorschlag, bevor ein Gehäuse entsteht.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no">03</span>
+              <div>
+                <h3>Prototyp</h3>
+                <p>Ein Muster zum Anfassen: Gehäuse, Zifferblatt, Zeiger, Band. Korrekturen sind Teil des Schritts.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no">04</span>
+              <div>
+                <h3>Fertigung</h3>
+                <p>Die abgestimmte Serie wird gefertigt und graviert. Jede Uhr wird geprüft.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no">05</span>
+              <div>
+                <h3>Übergabe</h3>
+                <p>Im Etui, bereit für die Feier, das Meeting oder den Tisch zu Hause.</p>
+              </div>
+            </li>
+          </ol>
+          <figure class="reveal">
+            <div class="photo">
+              <img src="assets/images/sketch-720.webp" srcset="assets/images/sketch-720.webp 720w, assets/images/sketch-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 42vw" alt="Entwurfsskizze einer Uhr mit Farbmustern, Stahlgehäuse und blauem Zifferblatt" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="konfigurator">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Konfigurator</p>
+          <h2>Gestalte deine Uhr</h2>
+          <p class="lead">Wählt Gehäuse, Zifferblatt, Zeiger und Band. Setzt ein kurzes Zeichen auf das Zifferblatt und eine Zeile auf den Boden. Die Vorschau ist eine Skizze. Mit «Konfiguration anfragen» übernehmt ihr die Wahl ins Formular.</p>
+        </header>
+        <div class="config-layout">
+          <div class="vitrine reveal">
+            <div class="view-toggle" role="group" aria-label="Ansicht der Skizze">
+              <button type="button" data-config="view" data-value="front" aria-pressed="true">Zifferblatt</button>
+              <button type="button" data-config="view" data-value="back" aria-pressed="false">Gehäuseboden</button>
+            </div>
+            <svg id="watch" class="watch" viewBox="0 0 420 640" role="img" aria-labelledby="watchTitle" data-finish="gebuerstet" data-dial="blau" data-hands="dauphine" data-strap="stahl" data-view="front">
+              <title id="watchTitle">Skizze der konfigurierten Uhr</title>
+              <defs>
+                <linearGradient id="gradPoliert" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffffff"></stop>
+                  <stop offset="0.22" stop-color="#d5dbe1"></stop>
+                  <stop offset="0.5" stop-color="#8f9ba6"></stop>
+                  <stop offset="0.74" stop-color="#eef2f4"></stop>
+                  <stop offset="1" stop-color="#b7c1c9"></stop>
+                </linearGradient>
+                <linearGradient id="gradBrush" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#e7ecef"></stop>
+                  <stop offset="0.42" stop-color="#c5ced6"></stop>
+                  <stop offset="0.74" stop-color="#9aa6b0"></stop>
+                  <stop offset="1" stop-color="#dfe5ea"></stop>
+                </linearGradient>
+                <linearGradient id="gradPvd" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4a4e55"></stop>
+                  <stop offset="0.38" stop-color="#1b1d21"></stop>
+                  <stop offset="0.7" stop-color="#2a2d32"></stop>
+                  <stop offset="1" stop-color="#0e0f12"></stop>
+                </linearGradient>
+                <radialGradient id="dialBlau" cx="50%" cy="38%" r="68%">
+                  <stop offset="0" stop-color="#8eb0d2"></stop>
+                  <stop offset="0.28" stop-color="#3d6fa3"></stop>
+                  <stop offset="0.62" stop-color="#1e4d7c"></stop>
+                  <stop offset="1" stop-color="#10283f"></stop>
+                </radialGradient>
+                <radialGradient id="dialSilber" cx="50%" cy="38%" r="68%">
+                  <stop offset="0" stop-color="#ffffff"></stop>
+                  <stop offset="0.42" stop-color="#d5dbe1"></stop>
+                  <stop offset="1" stop-color="#8e99a3"></stop>
+                </radialGradient>
+                <radialGradient id="dialGraphit" cx="50%" cy="38%" r="68%">
+                  <stop offset="0" stop-color="#5c636c"></stop>
+                  <stop offset="0.48" stop-color="#2a2e34"></stop>
+                  <stop offset="1" stop-color="#121417"></stop>
+                </radialGradient>
+                <radialGradient id="dialElfenbein" cx="50%" cy="40%" r="70%">
+                  <stop offset="0" stop-color="#fffaf3"></stop>
+                  <stop offset="0.55" stop-color="#f0e6d6"></stop>
+                  <stop offset="1" stop-color="#d9cbb6"></stop>
+                </radialGradient>
+                <linearGradient id="leatherBrown" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#3a2418"></stop>
+                  <stop offset="0.35" stop-color="#7a5138"></stop>
+                  <stop offset="0.5" stop-color="#8d6249"></stop>
+                  <stop offset="0.72" stop-color="#6b4632"></stop>
+                  <stop offset="1" stop-color="#2c1b12"></stop>
+                </linearGradient>
+                <linearGradient id="leatherBlack" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#141414"></stop>
+                  <stop offset="0.4" stop-color="#3a3a3a"></stop>
+                  <stop offset="0.55" stop-color="#4a4a4a"></stop>
+                  <stop offset="1" stop-color="#101010"></stop>
+                </linearGradient>
+                <linearGradient id="rubberBlue" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#14283f"></stop>
+                  <stop offset="0.5" stop-color="#2c5a86"></stop>
+                  <stop offset="1" stop-color="#12243a"></stop>
+                </linearGradient>
+                <pattern id="grainPattern" patternUnits="userSpaceOnUse" width="3" height="3">
+                  <path d="M1.5 0 V3" stroke="#ffffff" stroke-opacity="0.45" stroke-width="0.45"></path>
+                </pattern>
+              </defs>
+
+              <g class="strap strap-stahl">
+                <g><rect class="metal-fill" x="154" y="8" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="8" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="34" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="34" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="60" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="60" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="86" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="86" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="112" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="112" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="138" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="138" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="164" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="164" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="412" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="412" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="438" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="438" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="464" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="464" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="490" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="490" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="516" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="516" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="542" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="542" width="28" height="22"></rect></g>
+                <g><rect class="metal-fill" x="154" y="568" width="112" height="22" rx="1.2"></rect><rect class="link-mid" x="196" y="568" width="28" height="22"></rect></g>
+              </g>
+
+              <g class="strap strap-leder-braun">
+                <path class="leather" d="M164 206 L172 42 Q210 26 248 42 L256 206 Z"></path>
+                <path class="leather" d="M164 394 L172 598 Q210 614 248 598 L256 394 Z"></path>
+                <path class="stitch" d="M184 188 L188 54 M236 188 L232 54"></path>
+                <path class="stitch" d="M184 412 L188 584 M236 412 L232 584"></path>
+              </g>
+              <g class="strap strap-leder-schwarz">
+                <path class="leather" d="M164 206 L172 42 Q210 26 248 42 L256 206 Z"></path>
+                <path class="leather" d="M164 394 L172 598 Q210 614 248 598 L256 394 Z"></path>
+                <path class="stitch" d="M184 188 L188 54 M236 188 L232 54"></path>
+                <path class="stitch" d="M184 412 L188 584 M236 412 L232 584"></path>
+              </g>
+              <g class="strap strap-kautschuk">
+                <path class="rubber" d="M160 208 L168 36 Q210 22 252 36 L260 208 Z"></path>
+                <path class="rubber" d="M160 392 L168 604 Q210 618 252 604 L260 392 Z"></path>
+                <path class="groove" d="M210 52 V188 M210 412 V586"></path>
+              </g>
+
+              <circle class="metal-fill" cx="210" cy="300" r="118"></circle>
+              <circle class="grain" cx="210" cy="300" r="118" fill="url(#grainPattern)"></circle>
+              <circle class="metal-stroke bezel" cx="210" cy="300" r="103" fill="none"></circle>
+
+              <g class="face-front">
+                <circle class="dial" cx="210" cy="300" r="86"></circle>
+                <circle class="rehaut" cx="210" cy="300" r="90"></circle>
+                <g class="dial-ink">
+                  <g class="indices">
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(0 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(30 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(60 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(90 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(120 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(150 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(180 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(210 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(240 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(270 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(300 210 300)"></rect>
+                    <rect x="207.6" y="220" width="4.8" height="16" rx="0.4" transform="rotate(330 210 300)"></rect>
+                  </g>
+                  <text id="dialText" x="210" y="348" text-anchor="middle"></text>
+                  <g class="hands hands-dauphine">
+                    <polygon points="210,250 216,286 213.2,306 210,313 206.8,306 204,286" transform="rotate(-60 210 300)"></polygon>
+                    <polygon points="210,226 214.2,270 212.2,306 210,313 207.8,306 205.8,270" transform="rotate(60 210 300)"></polygon>
+                    <line class="second-hand" x1="210" y1="222" x2="210" y2="328" transform="rotate(240 210 300)"></line>
+                  </g>
+                  <g class="hands hands-baton">
+                    <rect x="206.4" y="248" width="7.2" height="66" rx="0.8" transform="rotate(-60 210 300)"></rect>
+                    <rect x="208.2" y="224" width="3.6" height="90" rx="0.6" transform="rotate(60 210 300)"></rect>
+                    <line class="second-hand" x1="210" y1="222" x2="210" y2="328" transform="rotate(240 210 300)"></line>
+                  </g>
+                  <g class="hands hands-feuille">
+                    <path d="M210 248 C224 274 220 296 213 308 L210 314 L207 308 C200 296 196 274 210 248 Z" transform="rotate(-60 210 300)"></path>
+                    <path d="M210 226 C222 262 218 294 212 308 L210 314 L208 308 C202 294 198 262 210 226 Z" transform="rotate(60 210 300)"></path>
+                    <line class="second-hand" x1="210" y1="222" x2="210" y2="328" transform="rotate(240 210 300)"></line>
+                  </g>
+                </g>
+                <circle class="pin" cx="210" cy="300" r="6.5"></circle>
+                <circle class="pin-dot" cx="210" cy="300" r="2.5"></circle>
+                <ellipse cx="186" cy="258" rx="26" ry="7" fill="#ffffff" opacity="0.09" transform="rotate(-22 186 258)"></ellipse>
+              </g>
+
+              <g class="face-back">
+                <circle class="metal-fill" cx="210" cy="300" r="86"></circle>
+                <circle class="cb-ring" cx="210" cy="300" r="74"></circle>
+                <circle class="cb-ring" cx="210" cy="300" r="54"></circle>
+                <g>
+                  <g transform="translate(265 245)"><circle class="screw" r="5.1"></circle><path class="slot" d="M-2.4 0 H2.4"></path></g>
+                  <g transform="translate(265 355)"><circle class="screw" r="5.1"></circle><path class="slot" d="M-2.4 0 H2.4"></path></g>
+                  <g transform="translate(155 355)"><circle class="screw" r="5.1"></circle><path class="slot" d="M-2.4 0 H2.4"></path></g>
+                  <g transform="translate(155 245)"><circle class="screw" r="5.1"></circle><path class="slot" d="M-2.4 0 H2.4"></path></g>
+                </g>
+                <text id="engravingText" class="engraving" text-anchor="middle"></text>
+              </g>
+
+              <g class="crown" transform="translate(320 300)">
+                <rect class="metal-fill" x="0" y="-7" width="12" height="14" rx="1"></rect>
+                <rect class="metal-fill" x="10" y="-15" width="18" height="30" rx="2"></rect>
+                <path class="knurl" d="M15 -12 V12 M19 -13 V13 M23 -13 V13 M27 -12 V12"></path>
+              </g>
+              <circle class="rim" cx="210" cy="300" r="117.3"></circle>
+            </svg>
+            <p class="vitrine-note">Skizze, kein Produktfoto. Farbe und Proportion sind angenähert.</p>
+          </div>
+
+          <div class="controls reveal">
+            <div class="control">
+              <h3>Gehäuse</h3>
+              <div class="opt-grid" role="group" aria-label="Gehäusefinish">
+                <button type="button" class="opt" data-config="finish" data-value="poliert" aria-pressed="false">Poliert</button>
+                <button type="button" class="opt" data-config="finish" data-value="gebuerstet" aria-pressed="true">Gebürstet</button>
+                <button type="button" class="opt" data-config="finish" data-value="pvd" aria-pressed="false">Schwarz PVD</button>
+              </div>
+            </div>
+            <div class="control">
+              <h3>Zifferblatt</h3>
+              <div class="opt-grid" role="group" aria-label="Zifferblattfarbe">
+                <button type="button" class="opt" data-config="dial" data-value="blau" aria-pressed="true">Metallblau</button>
+                <button type="button" class="opt" data-config="dial" data-value="silber" aria-pressed="false">Silber</button>
+                <button type="button" class="opt" data-config="dial" data-value="graphit" aria-pressed="false">Graphit</button>
+                <button type="button" class="opt" data-config="dial" data-value="elfenbein" aria-pressed="false">Elfenbein</button>
+              </div>
+            </div>
+            <div class="control">
+              <h3>Zeiger</h3>
+              <div class="opt-grid" role="group" aria-label="Zeigerform">
+                <button type="button" class="opt" data-config="hands" data-value="dauphine" aria-pressed="true">Dauphine</button>
+                <button type="button" class="opt" data-config="hands" data-value="baton" aria-pressed="false">Baton</button>
+                <button type="button" class="opt" data-config="hands" data-value="feuille" aria-pressed="false">Feuille</button>
+              </div>
+            </div>
+            <div class="control">
+              <h3>Band</h3>
+              <div class="opt-grid" role="group" aria-label="Band">
+                <button type="button" class="opt" data-config="strap" data-value="stahl" aria-pressed="true">Stahl</button>
+                <button type="button" class="opt" data-config="strap" data-value="leder-braun" aria-pressed="false">Leder braun</button>
+                <button type="button" class="opt" data-config="strap" data-value="leder-schwarz" aria-pressed="false">Leder schwarz</button>
+                <button type="button" class="opt" data-config="strap" data-value="kautschuk" aria-pressed="false">Kautschuk blau</button>
+              </div>
+            </div>
+            <div class="control">
+              <div class="label-row">
+                <label for="dialInput">Zeichen auf dem Zifferblatt</label>
+                <span class="count" id="dialCount">0 / 20</span>
+              </div>
+              <input id="dialInput" type="text" maxlength="20" autocomplete="off" spellcheck="false" autocapitalize="characters" aria-describedby="dialHint" placeholder="z. B. FC SEE">
+              <p class="hint" id="dialHint">Bis 20 Zeichen, über der Sechs. Ein Logo aus der Datei ersetzen wir im Entwurf.</p>
+            </div>
+            <div class="control">
+              <div class="label-row">
+                <label for="engravingInput">Gravur auf dem Boden</label>
+                <span class="count" id="engCount">0 / 42</span>
+              </div>
+              <input id="engravingInput" type="text" maxlength="42" autocomplete="off" spellcheck="false" aria-describedby="engHint" placeholder="z. B. L + M  14.06.2026">
+              <p class="hint" id="engHint">Bis 42 Zeichen. Die Ansicht «Gehäuseboden» zeigt die Zeile.</p>
+            </div>
+            <button class="btn btn-solid btn-block" id="applyConfig" type="button">Konfiguration anfragen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="atelier">
+      <div class="wrap atelier-grid">
+        <figure class="reveal">
+          <div class="photo">
+            <img src="assets/images/atelier-720.webp" srcset="assets/images/atelier-720.webp 720w, assets/images/atelier-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 48vw" alt="Uhrmacherhände mit Pinzette über einem Uhrwerk am Werktisch" width="1440" height="1080" loading="lazy" decoding="async">
+            <span class="sample-tag">Beispielbild</span>
+          </div>
+        </figure>
+        <div class="atelier-copy reveal">
+          <p class="eyebrow">Atelier</p>
+          <h2>Was aus der Nähe zählt</h2>
+          <p class="lead">Eine personalisierte Uhr ist kein Aufdruck auf einem beliebigen Modell. Zifferblatt, Gravur und Kontrolle geschehen am Werktisch: Pinzette, ruhige Hand, kleines Licht.</p>
+          <blockquote class="pull">Jede Uhr verlässt den Tisch erst, wenn Gravur, Zeigersitz und Oberfläche zusammenstimmen.</blockquote>
+          <p>Wir arbeiten in kleinen Serien und, wenn es eine einzelne Uhr ist, an genau dieser. So bleibt Platz, ein Wappen sauber zu setzen und eine Gravur zu lesen, auch wenn das Licht flach auf den Stahl fällt.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section materials" id="materialien">
+      <div class="wrap">
+        <div class="materials-grid">
+          <figure class="reveal">
+            <div class="photo">
+              <img src="assets/images/dials-720.webp" srcset="assets/images/dials-720.webp 720w, assets/images/dials-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), 46vw" alt="Vier Zifferblätter in Metallblau, Silber, Graphit und Elfenbein, dazu lose Zeiger" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+          </figure>
+          <div class="materials-copy reveal">
+            <p class="eyebrow">Materialien &amp; Zifferblätter</p>
+            <h2>Stahl, Saphir, Farbe</h2>
+            <p class="lead">Das Gehäuse ist Edelstahl. Darüber liegt Saphirglas. Die Farbe des Zifferblatts ist das Gesicht der Uhr, nicht ein Rand.</p>
+            <div class="mat-list">
+              <article>
+                <h3>Edelstahl</h3>
+                <p>Poliert, gebürstet oder schwarz PVD. Die Kante an Lünette und Bandanstoss bleibt klar.</p>
+              </article>
+              <article>
+                <h3>Saphirglas</h3>
+                <p>Hart, mit einer schmalen Facette. Es schützt Zifferblatt und Druck, ohne dick zu wirken.</p>
+              </article>
+              <article>
+                <h3>Zifferblatt</h3>
+                <p>Metallblau, Silber, Graphit oder Elfenbein. Sonnenschliff oder Guilloché führen das Licht. Dieselben vier Farben stehen in der Skizze.</p>
+              </article>
+              <article>
+                <h3>Gravur</h3>
+                <p>Auf dem Boden ist Raum für Text und Emblem. Auf dem Zifferblatt wirkt ein kurzes Zeichen stärker.</p>
+              </article>
+            </div>
+            <a class="text-link" href="#konfigurator">Farben in der Skizze ansehen
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </a>
+          </div>
+        </div>
+        <figure class="macro reveal">
+          <div class="photo">
+            <img src="assets/images/materials-720.webp" srcset="assets/images/materials-720.webp 720w, assets/images/materials-1440.webp 1440w" sizes="(max-width: 899px) calc(100vw - 3rem), min(1160px, 92vw)" alt="Makroaufnahme von gebürstetem Stahl, Saphirglas und blauem Guilloché" width="1440" height="1080" loading="lazy" decoding="async">
+            <span class="sample-tag">Beispielbild</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="beispiele">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Beispielbilder</p>
+          <h2>Mögliche Uhren, keine Aufträge</h2>
+        </header>
+        <aside class="notice reveal">
+          <p>Alle Fotografien auf dieser Seite sind Beispielbilder. Sie zeigen mögliche Gestaltungen und sind keine Aufnahmen ausgeführter Kundenaufträge.</p>
+        </aside>
+        <div class="gallery-grid">
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/club-720.webp" srcset="assets/images/club-720.webp 720w, assets/images/club-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: Uhr mit Fussballwappen auf marineblauem Zifferblatt" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Verein</span>
+              <span>Wappen auf marineblauem Zifferblatt</span>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/company-720.webp" srcset="assets/images/company-720.webp 720w, assets/images/company-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: Uhr mit Signet und Gravur 25 Jahre neben einem Etui" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Unternehmen</span>
+              <span>Signet und Gravur «25 Jahre»</span>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/private-720.webp" srcset="assets/images/private-720.webp 720w, assets/images/private-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: Gravur L + M, 14.06.2026 auf dem Gehäuseboden" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Privat</span>
+              <span>Bodengravur «L + M, 14.06.2026»</span>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/caseback-720.webp" srcset="assets/images/caseback-720.webp 720w, assets/images/caseback-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: Gehäuseboden mit graviertem Berg- und Wasseremblem" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Gehäuseboden</span>
+              <span>Emblem mit Bergen und Wasser</span>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/packaging-720.webp" srcset="assets/images/packaging-720.webp 720w, assets/images/packaging-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: marineblaues Etui mit elfenbeinfarbenem Kissen und Stahlarmbanduhr" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Etui</span>
+              <span>Marineblau, elfenbeinfarbenes Kissen</span>
+            </figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="photo">
+              <img src="assets/images/sketch-720.webp" srcset="assets/images/sketch-720.webp 720w, assets/images/sketch-1440.webp 1440w" sizes="(max-width: 719px) calc(100vw - 3rem), 40vw" alt="Beispielbild: Skizze, Farbmuster, Gehäuse und Zifferblatt" width="1440" height="1080" loading="lazy" decoding="async">
+              <span class="sample-tag">Beispielbild</span>
+            </div>
+            <figcaption>
+              <span class="shot-kicker">Entwurf</span>
+              <span>Skizze, Gehäuse, Zifferblatt</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Fragen</p>
+          <h2>Bevor ihr anfragt</h2>
+        </header>
+        <div class="faq reveal">
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
+                Mindestmenge
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
+              <p>Für Privatpersonen beginnt die Arbeit bei einem Stück. Es braucht keine Serie, um eine Gravur oder ein Zeichen zu setzen.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
+                Serien für Vereine und Firmen
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>Wenn Logo und Grundform gleich bleiben, fertigen wir Serien für Vereine, Clubs und Unternehmen. Namen, Daten oder Funktionen können sich von Uhr zu Uhr unterscheiden. Die passende Stückzahl klären wir mit der Anfrage.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
+                Lieferzeit
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>Ein einzelnes Stück mit Gravur braucht in der Regel mehrere Wochen, eine Serie länger. Nennt den Wunschtermin in der Anfrage. Wir sagen, welcher Termin haltbar ist, bevor ihr euch festlegt.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
+                Gravur
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>Text, Datum, Initialen oder ein Emblem. Der Gehäuseboden bietet mehr Fläche. Auf dem Zifferblatt bleibt ein kurzes Wort oder ein Zeichen lesbar. Wir prüfen Abstand und Strichstärke im Entwurf.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
+                Logo-Datei
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>Am besten eine Vektordatei: SVG, AI oder PDF. Ein PNG mit transparentem Hintergrund geht auch, wenn die Auflösung hoch genug ist. Ein Foto vom Trikot oder aus dem Briefkopf reicht als Vorlage nicht.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-btn" type="button" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
+                Preis auf Anfrage
+                <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.2"></path></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" hidden>
+              <p>Der Preis hängt von Stückzahl, Gehäuse, Zifferblatt, Band und Gravur ab. Auf dieser Seite gibt es keine Preise und keinen Warenkorb. Nach der Anfrage erhaltet ihr eine Offerte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="request" id="anfrage">
+      <div class="wrap request-grid">
+        <div class="request-intro">
+          <p class="eyebrow">Anfrage</p>
+          <h2>Uhr anfragen</h2>
+          <p class="lead">Beschreibt den Anlass in wenigen Feldern. Wenn ihr im Konfigurator eine Skizze gewählt habt, steht sie im Formular, sobald ihr «Konfiguration anfragen» wählt. In dieser Demonstration wird keine Nachricht gesendet.</p>
+        </div>
+        <div class="request-card">
+          <form id="requestForm" action="#anfrage" method="post" novalidate>
+            <div class="config-summary" id="configSummary">
+              <p class="summary-kicker">Konfiguration</p>
+              <p id="summaryPlaceholder">Noch keine Konfiguration übernommen. Im Konfigurator könnt ihr eine Skizze wählen und hierher übernehmen.</p>
+              <dl id="summaryList" hidden></dl>
+            </div>
+            <p class="form-alert" id="formAlert" role="alert" hidden>Bitte die markierten Felder prüfen.</p>
+            <div class="form-grid">
+              <div class="form-row-2">
+                <div class="field">
+                  <label for="anlass">Anlass</label>
+                  <select id="anlass" name="anlass" aria-required="true">
+                    <option value="">Bitte wählen</option>
+                    <option>Vereinsjubiläum</option>
+                    <option>Meisterschaft oder Saison</option>
+                    <option>Firmenjubiläum</option>
+                    <option>Mitarbeitergeschenk</option>
+                    <option>Kundengeschenk</option>
+                    <option>Hochzeit</option>
+                    <option>Geburt</option>
+                    <option>Persönliches Jubiläum</option>
+                    <option>Anderer Anlass</option>
+                  </select>
+                  <p class="field-error" id="anlass-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="kundentyp">Kundentyp</label>
+                  <select id="kundentyp" name="kundentyp" aria-required="true">
+                    <option value="">Bitte wählen</option>
+                    <option value="verein">Verein oder Club</option>
+                    <option value="unternehmen">Unternehmen</option>
+                    <option value="privat">Privatperson</option>
+                  </select>
+                  <p class="field-error" id="kundentyp-error" hidden></p>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="field">
+                  <label for="stueckzahl">Stückzahl</label>
+                  <input id="stueckzahl" name="stueckzahl" type="number" inputmode="numeric" min="1" max="9999" step="1" value="1" aria-required="true">
+                  <p class="field-error" id="stueckzahl-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="wunschtermin">Wunschtermin</label>
+                  <input id="wunschtermin" name="wunschtermin" type="text" maxlength="80" autocomplete="off" placeholder="z. B. Juni 2027">
+                </div>
+              </div>
+              <div class="field">
+                <label for="budget">Budgetrahmen</label>
+                <select id="budget" name="budget">
+                  <option>Noch offen</option>
+                  <option>Bis 5'000 CHF</option>
+                  <option>5'000–15'000 CHF</option>
+                  <option>15'000–40'000 CHF</option>
+                  <option>Über 40'000 CHF</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="logo">Logo-Datei</label>
+                <div class="file-row">
+                  <label class="btn btn-line" for="logo">Datei wählen</label>
+                  <input class="file-input" id="logo" name="logo" type="file" accept=".svg,.png,.pdf,.ai,.jpg,.jpeg,.webp,.eps,image/png,image/svg+xml,application/pdf">
+                  <span class="file-name" id="fileName">Keine Datei gewählt</span>
+                </div>
+                <p class="hint">SVG, PDF oder PNG. Die Datei bleibt in dieser Demo auf dem Gerät und wird nicht übertragen.</p>
+              </div>
+              <div class="field">
+                <label for="nachricht">Nachricht</label>
+                <textarea id="nachricht" name="nachricht" maxlength="2000" placeholder="Anlass, Wunsch zur Gravur, Fragen zur Serie."></textarea>
+              </div>
+              <div class="form-row-2">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" maxlength="80" aria-required="true">
+                  <p class="field-error" id="name-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="email">E-Mail</label>
+                  <input id="email" name="email" type="email" autocomplete="email" maxlength="120" aria-required="true" inputmode="email">
+                  <p class="field-error" id="email-error" hidden></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" maxlength="40" inputmode="tel">
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-solid" type="submit">Anfrage einreichen</button>
+              </div>
+            </div>
+          </form>
+          <div class="done" id="requestDone" hidden>
+            <h3 id="doneTitle" tabindex="-1">Anfrage erfasst</h3>
+            <p>Die Angaben stehen nur in diesem Fenster. Es wurde keine E-Mail gesendet und nichts gespeichert. Auf der echten Seite würde hier die Übermittlung an das Atelier folgen.</p>
+            <dl class="done-list" id="doneList"></dl>
+            <button class="btn btn-line" id="editRequest" type="button">Angaben bearbeiten</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/logo/atelier-w-logo-white.svg" alt="Atelier W" width="124" height="83">
+        <p class="fine">Personalisierte Uhren für Vereine, Unternehmen und private Anlässe. Kein Shop, keine Preise, eine Anfrage.</p>
+      </div>
+      <div>
+        <h2>Seiten</h2>
+        <ul>
+          <li><a href="#anlaesse">Anlässe</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#konfigurator">Konfigurator</a></li>
+          <li><a href="#atelier">Atelier</a></li>
+          <li><a href="#materialien">Materialien</a></li>
+          <li><a href="#beispiele">Beispielbilder</a></li>
+          <li><a href="#faq">Fragen</a></li>
+          <li><a href="#anfrage">Uhr anfragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="mailto:hallo@atelier-w.example">hallo@atelier-w.example</a></li>
+          <li><a href="tel:+41000000000">+41 00 000 00 00</a></li>
+          <li>Zürich, Schweiz</li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+        <p class="fine footer-note">Adresse, UID und Telefon sind Platzhalter.</p>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>Fotografien: Beispielbilder, keine Kundenaufträge.</p>
+      <p>© 2026 Atelier W, Platzhalter. Demonstration.</p>
+    </div>
+  </footer>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
